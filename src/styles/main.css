@@ -373,7 +373,7 @@ textarea {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-12);
+  gap: var(--space-20);
 }
 
 .lead-card {
@@ -382,12 +382,12 @@ textarea {
   box-sizing: border-box;
   background: var(--surface);
   border-radius: var(--radius-card);
-  padding: var(--space-16);
+  padding: var(--space-20);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
-  gap: var(--space-16);
+  gap: var(--space-20);
   transition:
     box-shadow var(--duration-slow) var(--ease-out),
     border-color var(--duration) var(--ease-standard),
@@ -431,13 +431,14 @@ textarea {
 }
 
 .lead-card__sub {
-  margin: var(--space-4) 0 0;
+  margin: var(--space-8) 0 0;
   font-size: 0.8125rem;
-  color: var(--text-soft);
+  line-height: 1.45;
+  color: #4a433a;
 }
 
 .lead-card__chev {
-  color: var(--text-soft);
+  color: #7a7268;
   font-size: 1.25rem;
   line-height: 1;
   margin-top: 2px;
@@ -480,30 +481,51 @@ textarea {
 }
 
 .interests {
-  padding-top: var(--space-4);
+  padding-top: var(--space-12);
+  margin-top: var(--space-4);
   border-top: 1px dashed var(--border);
 }
 
 .interests__label {
-  margin: 0 0 var(--space-8);
+  margin: 0 0 var(--space-12);
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-soft);
+  color: #5c564d;
 }
 
 .interests__list {
   margin: 0;
   padding-left: 1.1rem;
-  color: var(--text-muted);
+  color: #3d3831;
   font-size: 0.875rem;
-  line-height: 1.45;
+  line-height: 1.6;
 }
 
 .lead-card__actions {
   display: flex;
   gap: var(--space-12);
+  margin-top: var(--space-4);
+}
+
+.lead-card .btn--secondary {
+  flex: 1;
+  width: 100%;
+  border-width: 1.5px;
+  border-color: #1c1915;
+  color: var(--text);
+  background: transparent;
+}
+
+.lead-card .btn--secondary:hover {
+  background: rgba(28, 25, 21, 0.05);
+  border-color: #1c1915;
+  color: var(--text);
+}
+
+.lead-card .btn--secondary:active {
+  background: rgba(28, 25, 21, 0.08);
 }
 
 /* Placeholder panels */
