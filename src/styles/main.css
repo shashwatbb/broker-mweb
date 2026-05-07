@@ -227,21 +227,39 @@ textarea {
   flex: 1;
   min-height: var(--touch-min);
   padding: 0 var(--space-16);
-  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
   color: var(--text);
-  border: 1px solid var(--border-strong);
+  border: 1.5px solid #1c1915;
   border-radius: var(--radius-md);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn--secondary:hover {
-  background: transparent;
+  background: none;
+  background-color: transparent;
   border-color: #1c1915;
   transform: translateY(-1px);
 }
 
 .btn--secondary:active {
-  background: transparent;
+  background: none;
+  background-color: transparent;
+  border-color: #1c1915;
   transform: translateY(0) scale(0.99);
+}
+
+.btn--secondary:focus-visible {
+  background-color: transparent;
+}
+
+.btn--secondary::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
 
 .btn--touch {
@@ -541,20 +559,18 @@ textarea {
 .lead-card .btn--secondary {
   flex: 1;
   width: 100%;
-  border-width: 1.5px;
-  border-color: #1c1915;
-  color: var(--text);
-  background: transparent;
 }
 
 .lead-card .btn--secondary:hover {
-  background: transparent;
-  border-color: #0f0d0b;
+  background: none;
+  background-color: transparent;
+  border-color: #1c1915;
   color: var(--text);
 }
 
 .lead-card .btn--secondary:active {
-  background: transparent;
+  background: none;
+  background-color: transparent;
   border-color: #1c1915;
 }
 
@@ -742,21 +758,26 @@ textarea {
   color: var(--text);
   border: 1.5px solid #1c1915;
   border-radius: var(--radius-md);
-  background: transparent;
+  background: none;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
   transition:
-    background var(--duration) var(--ease-standard),
     border-color var(--duration) var(--ease-standard),
     color var(--duration) var(--ease-standard);
 }
 
 .listing-card:hover .listing-card__cta {
-  background: transparent;
-  border-color: #0f0d0b;
+  background: none;
+  background-color: transparent;
+  border-color: #1c1915;
   color: var(--text);
 }
 
 .listing-card:active .listing-card__cta {
-  background: transparent;
+  background: none;
+  background-color: transparent;
   border-color: #1c1915;
 }
 
