@@ -3,11 +3,11 @@
   color-scheme: light;
   --font: "Figtree", system-ui, -apple-system, sans-serif;
 
-  /* Warm, soft surfaces — lighter than before */
-  --bg: #fdf9f3;
-  --bg-canvas: #f9f5ed;
-  --bg-elevated: #fffcf7;
-  --surface: #fffcfa;
+  /* Warm, soft surfaces — lightly tinted canvas */
+  --bg: #f9f4eb;
+  --bg-canvas: #f4efe6;
+  --bg-elevated: #faf6ee;
+  --surface: #faf7f1;
   --text: #1c1915;
   --text-muted: #6b6459;
   --text-soft: #958c80;
