@@ -544,10 +544,32 @@ textarea {
 
 .interests__list {
   margin: 0;
-  padding-left: 1.1rem;
+  padding-left: 0;
+  list-style: none;
   color: #3d3831;
   font-size: 0.875rem;
   line-height: 1.6;
+}
+
+.interests__list li,
+.lead-detail__list li,
+.lead-detail__bullets li {
+  position: relative;
+  padding-left: 1.05rem;
+}
+
+.interests__list li::before,
+.lead-detail__list li::before,
+.lead-detail__bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.78em;
+  width: 5px;
+  height: 5px;
+  margin-top: -2.5px;
+  border-radius: 999px;
+  background: #6b6459;
 }
 
 .lead-card__actions {
@@ -703,6 +725,7 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: var(--space-12);
+  min-width: 0;
 }
 
 .listing-card__head {
@@ -742,6 +765,15 @@ textarea {
   font-size: 0.8125rem;
   line-height: 1.45;
   color: #504a42;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.listing-card__names-label {
+  font-weight: 600;
+  color: #6e665c;
 }
 
 .listing-card__cta {
@@ -1007,7 +1039,8 @@ textarea {
 
 .lead-detail__list {
   margin: 0;
-  padding-left: 1.15rem;
+  padding-left: 0;
+  list-style: none;
   color: #3d3831;
   font-size: 0.9375rem;
   line-height: 1.55;
@@ -1022,7 +1055,8 @@ textarea {
 
 .lead-detail__bullets {
   margin: 0;
-  padding-left: 1.15rem;
+  padding-left: 0;
+  list-style: none;
   color: #3d3831;
   font-size: 0.875rem;
   line-height: 1.55;
