@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#F4EFE6" />
+    <title>Broker CRM — Leads</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header class="top-bar" aria-label="Broker profile">
+        <div class="top-bar__identity">
+          <div class="avatar" aria-hidden="true">MA</div>
+          <div class="top-bar__text">
+            <h1 class="top-bar__name">Maya Agarwal</h1>
+            <p class="top-bar__meta">
+              <span class="top-bar__role">Premier Properties</span>
+            </p>
+          </div>
+        </div>
+        <button type="button" class="btn btn--add" aria-label="Add new item">Add</button>
+      </header>
+
+      <div class="tab-panels" role="main">
+        <div class="tab-panels__viewport">
+          <div class="tab-panels__track" id="tabTrack" data-active="0">
+          <!-- Leads -->
+          <section class="tab-panel" id="panel-leads" aria-label="Leads" data-tab="0">
+            <div class="filters" role="group" aria-label="Sort leads">
+              <span class="filters__label">Sort</span>
+              <div class="chip-group">
+                <button type="button" class="chip chip--active" data-filter="latest">Latest</button>
+                <button type="button" class="chip" data-filter="property">By property</button>
+                <button type="button" class="chip" data-filter="date">By date added</button>
+              </div>
+            </div>
+
+            <p class="section-date" id="leadsGroupDate">7 May, Wed</p>
+
+            <ul class="lead-list" id="leadList">
+              <li>
+                <article class="lead-card">
+                  <div class="lead-card__row lead-card__row--top">
+                    <span class="lead-card__glyph" aria-hidden="true">🏠</span>
+                    <div class="lead-card__main">
+                      <div class="lead-card__title-row">
+                        <h2 class="lead-card__name">Rahul Verma</h2>
+                        <span class="tag tag--status tag--new">New</span>
+                      </div>
+                      <p class="lead-card__sub">Added · <time datetime="2026-05-06">6 May 2026</time></p>
+                    </div>
+                    <span class="lead-card__chev" aria-hidden="true">›</span>
+                  </div>
+                  <div class="interests">
+                    <p class="interests__label">Property interests</p>
+                    <ul class="interests__list">
+                      <li>The Oberoi Sky Villas · 3 BHK</li>
+                      <li>Embassy Lake Terraces · Plot</li>
+                    </ul>
+                  </div>
+                  <div class="lead-card__actions">
+                    <button type="button" class="btn btn--primary btn--touch">Message</button>
+                    <button type="button" class="btn btn--secondary btn--touch">View details</button>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="lead-card">
+                  <div class="lead-card__row lead-card__row--top">
+                    <span class="lead-card__glyph" aria-hidden="true">💬</span>
+                    <div class="lead-card__main">
+                      <div class="lead-card__title-row">
+                        <h2 class="lead-card__name">Neha Krishnan</h2>
+                        <span class="tag tag--status tag--warm">Follow-up</span>
+                      </div>
+                      <p class="lead-card__sub">Added · <time datetime="2026-05-04">4 May 2026</time></p>
+                    </div>
+                    <span class="lead-card__chev" aria-hidden="true">›</span>
+                  </div>
+                  <div class="interests">
+                    <p class="interests__label">Property interests</p>
+                    <ul class="interests__list">
+                      <li>Prestige Lakeside Habitat · 2 BHK</li>
+                    </ul>
+                  </div>
+                  <div class="lead-card__actions">
+                    <button type="button" class="btn btn--primary btn--touch">Message</button>
+                    <button type="button" class="btn btn--secondary btn--touch">View details</button>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="lead-card">
+                  <div class="lead-card__row lead-card__row--top">
+                    <span class="lead-card__glyph" aria-hidden="true">📍</span>
+                    <div class="lead-card__main">
+                      <div class="lead-card__title-row">
+                        <h2 class="lead-card__name">Arjun Mehta</h2>
+                        <span class="tag tag--status tag--muted">Qualified</span>
+                      </div>
+                      <p class="lead-card__sub">Added · <time datetime="2026-05-01">1 May 2026</time></p>
+                    </div>
+                    <span class="lead-card__chev" aria-hidden="true">›</span>
+                  </div>
+                  <div class="interests">
+                    <p class="interests__label">Property interests</p>
+                    <ul class="interests__list">
+                      <li>Salarpuria Sattva · Commercial</li>
+                      <li>Whitefield micro-market · Land</li>
+                    </ul>
+                  </div>
+                  <div class="lead-card__actions">
+                    <button type="button" class="btn btn--primary btn--touch">Message</button>
+                    <button type="button" class="btn btn--secondary btn--touch">View details</button>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Listings -->
+          <section class="tab-panel tab-panel--muted" id="panel-listings" aria-label="Listings" data-tab="1">
+            <p class="listing-blurb">Tap a listing to open the property brief (PDF).</p>
+            <p class="listing-disclaimer">* Indicative pricing. Interest shown from WhatsApp leads.</p>
+            <ul class="listing-list">
+              <li>
+                <a
+                  class="listing-card"
+                  href="listings/oberoi-sky-villas.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="listing-card__visual listing-card__visual--a" aria-hidden="true"></div>
+                  <div class="listing-card__body">
+                    <div class="listing-card__head">
+                      <h2 class="listing-card__title">The Oberoi Sky Villas</h2>
+                      <span class="listing-card__price">₹4.2 Cr*</span>
+                    </div>
+                    <p class="listing-card__spec">3 BHK · 2,850 sq ft · Mid-floor · East corridor</p>
+                    <div class="listing-card__interested">
+                      <span class="listing-card__interested-label">Interested</span>
+                      <div class="listing-avatars" aria-hidden="true">
+                        <span class="listing-avatar">RV</span>
+                        <span class="listing-avatar">PS</span>
+                      </div>
+                      <p class="listing-card__names">
+                        <span class="listing-card__names-inner">Rahul Verma</span>
+                        <span class="listing-card__dot">·</span>
+                        <span class="listing-card__names-inner">Priya Shah</span>
+                      </p>
+                    </div>
+                    <span class="listing-card__cta">Property PDF <span aria-hidden="true">↗</span></span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="listing-card"
+                  href="listings/prestige-lakeside-habitat.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="listing-card__visual listing-card__visual--b" aria-hidden="true"></div>
+                  <div class="listing-card__body">
+                    <div class="listing-card__head">
+                      <h2 class="listing-card__title">Prestige Lakeside Habitat</h2>
+                      <span class="listing-card__price">₹1.85 Cr*</span>
+                    </div>
+                    <p class="listing-card__spec">2 BHK · ~1,180 sq ft · Inner block · Lake-facing</p>
+                    <div class="listing-card__interested">
+                      <span class="listing-card__interested-label">Interested</span>
+                      <div class="listing-avatars" aria-hidden="true">
+                        <span class="listing-avatar">NK</span>
+                      </div>
+                      <p class="listing-card__names">
+                        <span class="listing-card__names-inner">Neha Krishnan</span>
+                      </p>
+                    </div>
+                    <span class="listing-card__cta">Property PDF <span aria-hidden="true">↗</span></span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="listing-card"
+                  href="listings/salarpuria-sattva-commercial.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="listing-card__visual listing-card__visual--c" aria-hidden="true"></div>
+                  <div class="listing-card__body">
+                    <div class="listing-card__head">
+                      <h2 class="listing-card__title">Salarpuria Sattva · Commercial</h2>
+                      <span class="listing-card__price">₹3.4 Cr*</span>
+                    </div>
+                    <p class="listing-card__spec">Office · ~2,400 sq ft · ORR micro-market · Shell</p>
+                    <div class="listing-card__interested">
+                      <span class="listing-card__interested-label">Interested</span>
+                      <div class="listing-avatars" aria-hidden="true">
+                        <span class="listing-avatar">AM</span>
+                        <span class="listing-avatar">VR</span>
+                      </div>
+                      <p class="listing-card__names">
+                        <span class="listing-card__names-inner">Arjun Mehta</span>
+                        <span class="listing-card__dot">·</span>
+                        <span class="listing-card__names-inner">Vikram Rao</span>
+                      </p>
+                    </div>
+                    <span class="listing-card__cta">Property PDF <span aria-hidden="true">↗</span></span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Today's Work -->
+          <section class="tab-panel tab-panel--muted" id="panel-work" aria-label="Today's work" data-tab="2">
+            <div class="placeholder-card">
+              <h2 class="placeholder-card__title">Today’s work</h2>
+              <p class="placeholder-card__text">
+                Follow-ups, viewings, and messages due today show up here so nothing slips through.
+              </p>
+              <ul class="mini-list">
+                <li><span class="mini-list__time">10:00</span> Callback · Rahul Verma</li>
+                <li><span class="mini-list__time">14:30</span> Site visit · Neha Krishnan</li>
+              </ul>
+            </div>
+          </section>
+          </div>
+        </div>
+      </div>
+
+      <nav class="bottom-nav" aria-label="Primary">
+        <div class="bottom-nav__pill" role="tablist">
+          <button
+            type="button"
+            class="bottom-nav__tab bottom-nav__tab--active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-leads"
+            id="tab-leads"
+            data-index="0"
+          >
+            <svg class="bottom-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm16 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Leads</span>
+          </button>
+          <button
+            type="button"
+            class="bottom-nav__tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-listings"
+            id="tab-listings"
+            data-index="1"
+          >
+            <svg class="bottom-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M3 9.5l9-6 9 6V19a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Listings</span>
+          </button>
+          <button
+            type="button"
+            class="bottom-nav__tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-work"
+            id="tab-work"
+            data-index="2"
+          >
+            <svg class="bottom-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M9 11H5a2 2 0 0 0-2 2v7h18v-7a2 2 0 0 0-2-2h-4M9 11V7a3 3 0 0 1 6 0v4M9 11h6"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Today’s work</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

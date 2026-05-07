@@ -1,0 +1,21 @@
+{
+  "name": "broker-crm-mweb",
+  "private": true,
+  "type": "module",
+  "homepage": "https://shashwatbb.github.io/BrokerBuddy/",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "generate-pdfs": "node scripts/generate-listing-pdfs.mjs",
+    "prebuild": "node scripts/generate-listing-pdfs.mjs",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist --dotfiles"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "pdf-lib": "^1.17.1",
+    "vite": "^6.3.5"
+  }
+}
