@@ -1,9 +1,10 @@
 /* Broker CRM mWeb — design tokens */
 :root {
   color-scheme: light;
-  --font: "Figtree", system-ui, -apple-system, sans-serif;
+  --font: "Google Sans Flex", "Google Sans", system-ui, -apple-system, sans-serif;
 
   --bg: #f4efe6;
+  --bg-canvas: #efeae2;
   --bg-elevated: #faf7f1;
   --surface: #ffffff;
   --text: #14120f;
@@ -23,6 +24,7 @@
   --radius-sm: 10px;
   --radius-md: 12px;
   --radius-lg: 20px;
+  --radius-card: 18px;
   --radius-pill: 999px;
 
   --space-4: 4px;
@@ -31,6 +33,10 @@
   --space-16: 16px;
   --space-20: 20px;
   --space-24: 24px;
+
+  --shadow-card: 0 4px 18px rgba(20, 18, 15, 0.06);
+
+  --nav-track: #dcd5cb;
 
   --touch-min: 48px;
   --tab-slide: 0.38s cubic-bezier(0.32, 0.72, 0, 1);
@@ -54,7 +60,8 @@ body {
 body {
   margin: 0;
   font-family: var(--font);
-  background: var(--bg);
+  font-optical-sizing: auto;
+  background: var(--bg-canvas);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
 }
@@ -113,7 +120,7 @@ textarea {
 
 .top-bar__name {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.625rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -127,6 +134,13 @@ textarea {
 
 .top-bar__role {
   color: var(--text-soft);
+}
+
+.top-bar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  flex-shrink: 0;
 }
 
 /* Buttons */
@@ -164,6 +178,26 @@ textarea {
 }
 
 .btn--add:active {
+  transform: scale(0.98);
+}
+
+.btn--edit {
+  min-height: var(--touch-min);
+  padding: 0 var(--space-16);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--edit:hover {
+  background: #fff;
+  color: var(--text);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.btn--edit:active {
   transform: scale(0.98);
 }
 
@@ -285,7 +319,7 @@ textarea {
   font-size: 0.8125rem;
   font-weight: 600;
   padding: 10px 14px;
-  min-height: 40px;
+  min-height: var(--touch-min);
   border-radius: var(--radius-pill);
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.65);
@@ -311,10 +345,22 @@ textarea {
 }
 
 .section-date {
-  margin: 0;
+  margin: 0 0 var(--space-12);
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--text-soft);
+}
+
+.lead-feed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.date-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
 }
 
 /* Lead list */
@@ -329,10 +375,10 @@ textarea {
 
 .lead-card {
   background: var(--surface);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   padding: var(--space-16);
-  border: 1px solid rgba(232, 225, 214, 0.9);
-  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(232, 225, 214, 0.75);
+  box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
   gap: var(--space-16);
@@ -412,6 +458,15 @@ textarea {
 .tag--muted {
   color: var(--text-muted);
   background: rgba(92, 86, 79, 0.1);
+}
+
+.tag--inline {
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  vertical-align: baseline;
 }
 
 .interests {
@@ -712,8 +767,8 @@ textarea {
   gap: var(--space-4);
   padding: var(--space-4);
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid var(--border);
+  background: var(--nav-track);
+  border: 1px solid rgba(220, 213, 203, 0.95);
   box-shadow: var(--shadow-lg);
   backdrop-filter: blur(14px);
 }
@@ -750,7 +805,7 @@ textarea {
 .bottom-nav__tab--active {
   background: #fff;
   color: var(--text);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 10px rgba(20, 18, 15, 0.1);
 }
 
 .bottom-nav__icon {
