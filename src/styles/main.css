@@ -29,6 +29,7 @@
   --radius-pill: 999px;
 
   --space-4: 4px;
+  --space-6: 6px;
   --space-8: 8px;
   --space-12: 12px;
   --space-16: 16px;
@@ -352,7 +353,7 @@ textarea {
 }
 
 .section-date {
-  margin: 0 0 var(--space-6);
+  margin: 0;
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--text-soft);
