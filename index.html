@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#F4EFE6" />
+    <title>Broker CRM — Leads</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="./assets/index-B1f3sW3T.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CR8xsgtJ.css">
+  </head>
+  <body>
+    <section class="desktop-only" id="desktopOnly" aria-labelledby="desktop-only-heading">
+      <div class="desktop-only__inner">
+        <img
+          class="desktop-only__mascot"
+          src="./mobile-only-mascot.png"
+          alt=""
+          width="260"
+          height="260"
+          decoding="async"
+        />
+        <h1 class="desktop-only__title" id="desktop-only-heading">Only for mobile, bruh</h1>
+        <p class="desktop-only__shortcut">
+          <span class="desktop-only__shortcut-label">Shortcut:</span>
+          <kbd class="kbd">⌘</kbd>
+          <span class="desktop-only__plus">+</span>
+          <kbd class="kbd">Option</kbd>
+          <span class="desktop-only__plus">+</span>
+          <kbd class="kbd">I</kbd>
+        </p>
+      </div>
+    </section>
+    <div id="app" class="app">
+      <header class="top-bar" aria-label="Broker profile">
+        <div class="top-bar__identity">
+          <div class="avatar" aria-hidden="true">
+            <img
+              class="avatar__img"
+              src="https://images.unsplash.com/photo-1617297873650-aef8f4e00b9b?auto=format&fit=crop&crop=faces&w=176&h=176&q=85"
+              alt=""
+              width="44"
+              height="44"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="top-bar__text">
+            <h1 class="top-bar__name">Maya Agarwal</h1>
+            <p class="top-bar__meta">
+              <span class="top-bar__role">Premier Properties</span>
+            </p>
+          </div>
+        </div>
+        <div class="top-bar__actions">
+          <button type="button" class="btn btn--add" aria-label="Add new item">Add</button>
+        </div>
+      </header>
+
+      <div class="tab-panels" role="main">
+        <div class="tab-panels__viewport">
+          <div class="tab-panels__track" id="tabTrack" data-active="0">
+          <!-- Leads -->
+          <section class="tab-panel" id="panel-leads" aria-label="Leads" data-tab="0">
+            <div class="filters" role="group" aria-label="Sort leads">
+              <span class="filters__label">Sort by</span>
+              <div class="chip-group">
+                <button type="button" class="chip chip--active" data-filter="latest">Latest</button>
+                <button type="button" class="chip" data-filter="property">By property</button>
+                <button type="button" class="chip" data-filter="date">By date added</button>
+              </div>
+            </div>
+
+            <div class="lead-feed">
+            <div class="date-group">
+            <p class="section-date">6 May, Tue</p>
+            <ul class="lead-list">
+              <li>
+                <article class="lead-card lead-card--clickable" data-lead-id="rahul-verma" tabindex="0" role="button" aria-label="Open lead Rahul Verma">
+                  <div class="lead-card__row lead-card__row--top">
+                    <span class="lead-card__glyph" aria-hidden="true">
+                      <img
+                        class="lead-card__glyph-img"
+                        src="https://images.unsplash.com/photo-1694871420538-b40db58ae5af?auto=format&fit=crop&w=160&h=160&q=80"
+                        alt=""
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <div class="lead-card__main">
+                      <h2 class="lead-card__name">Rahul Verma</h2>
+                      <p class="lead-card__sub"><span class="tag tag--inline tag--new">New</span> · Added <time datetime="2026-05-06">6 May</time></p>
+                    </div>
+                    <span class="lead-card__chev" aria-hidden="true">›</span>
+                  </div>
+                  <div class="interests">
+                    <p class="interests__label">Property interests</p>
+                    <ul class="interests__list">
+                      <li>The Oberoi Sky Villas · 3 BHK</li>
+                      <li>Embassy Lake Terraces · Plot</li>
+                    </ul>
+                  </div>
+                  <div class="lead-card__actions">
+                    <button type="button" class="btn btn--secondary btn--touch lead-card__cta-btn">View details</button>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="lead-card lead-card--clickable" data-lead-id="karan-malhotra" tabindex="0" role="button" aria-label="Open lead Karan Malhotra">
+                  <div class="lead-card__row lead-card__row--top">
+                    <span class="lead-card__glyph" aria-hidden="true">
+                      <img
+                        class="lead-card__glyph-img"
+                        src="https://images.unsplash.com/photo-1712425718137-491250cfde88?auto=format&fit=crop&w=160&h=160&q=80"
+                        alt=""
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <div class="lead-card__main">
+                      <h2 class="lead-card__name">Karan Malhotra</h2>
+                      <p class="lead-card__sub"><span class="tag tag--inline tag--new">New</span> · Added <time datetime="2026-05-06">6 May</time></p>
+                    </div>
+                    <span class="lead-card__chev" aria-hidden="true">›</span>
+                  </div>
+                  <div class="interests">
+                    <p class="interests__label">Property interests</p>
+                    <ul class="interests__list">
+                      <li>Brigade Northridge Estate · Villa</li>
+                      <li>Mahindra Lifespaces · 3 BHK</li>
+                    </ul>
+                  </div>
+                  <div class="lead-card__actions">
+                    <button type="button" class="btn btn--secondary btn--touch lead-card__cta-btn">View details</button>
+                  </div>
+                </article>
+              </li>
+            </ul>
+            </div>
+
+            <div class="date-group">
+            <p class="section-date">4 May, Sun</p>
+            <ul class="lead-list">
+              <li>
+                <article class="lead-card lead-card--clickable" data-lead-id="neha-krishnan" tabindex="0" role="button" aria-label="Open lead Neha Krishnan">
+                  <div class="lead-card__row lead-card__row--top">
+                    <span class="lead-card__glyph" aria-hidden="true">
+                      <img
+                        class="lead-card__glyph-img"
+                        src="https://images.unsplash.com/photo-1580746453801-37b0bc56f3b4?auto=format&fit=crop&w=160&h=160&q=80"
+                        alt=""
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <div class="lead-card__main">
+                      <h2 class="lead-card__name">Neha Krishnan</h2>
+                      <p class="lead-card__sub"><span class="tag tag--inline tag--warm">Follow-up</span> · Added <time datetime="2026-05-04">4 May</time></p>
+                    </div>
+                    <span class="lead-card__chev" aria-hidden="true">›</span>
+                  </div>
+                  <div class="interests">
+                    <p class="interests__label">Property interests</p>
+                    <ul class="interests__list">
+                      <li>Prestige Lakeside Habitat · 2 BHK</li>
+                    </ul>
+                  </div>
+                  <div class="lead-card__actions">
+                    <button type="button" class="btn btn--secondary btn--touch lead-card__cta-btn">View details</button>
+                  </div>
+                </article>
+              </li>
+            </ul>
+            </div>
+
+            <div class="date-group">
+            <p class="section-date">3 May, Sat</p>
+            <ul class="lead-list">
+              <li>
+                <article class="lead-card lead-card--clickable" data-lead-id="priya-shah" tabindex="0" role="button" aria-label="Open lead Priya Shah">
+                  <div class="lead-card__row lead-card__row--top">
+                    <span class="lead-card__glyph" aria-hidden="true">
+                      <img
+                        class="lead-card__glyph-img"
+                        src="https://images.unsplash.com/photo-1749317776467-6dcf2bfbd26b?auto=format&fit=crop&w=160&h=160&q=80"
+                        alt=""
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <div class="lead-card__main">
+                      <h2 class="lead-card__name">Priya Shah</h2>
+                      <p class="lead-card__sub"><span class="tag tag--inline tag--warm">Follow-up</span> · Added <time datetime="2026-05-03">3 May</time></p>
+                    </div>
+                    <span class="lead-card__chev" aria-hidden="true">›</span>
+                  </div>
+                  <div class="interests">
+                    <p class="interests__label">Property interests</p>
+                    <ul class="interests__list">
+                      <li>The Oberoi Sky Villas · 4 BHK</li>
+                      <li>Embassy Boulevard · Penthouse</li>
+                    </ul>
+                  </div>
+                  <div class="lead-card__actions">
+                    <button type="button" class="btn btn--secondary btn--touch lead-card__cta-btn">View details</button>
+                  </div>
+                </article>
+              </li>
+            </ul>
+            </div>
+
+            <div class="date-group">
+            <p class="section-date">1 May, Thu</p>
+            <ul class="lead-list">
+              <li>
+                <article class="lead-card lead-card--clickable" data-lead-id="arjun-mehta" tabindex="0" role="button" aria-label="Open lead Arjun Mehta">
+                  <div class="lead-card__row lead-card__row--top">
+                    <span class="lead-card__glyph" aria-hidden="true">
+                      <img
+                        class="lead-card__glyph-img"
+                        src="https://images.unsplash.com/photo-1774438023794-a0819fccca54?auto=format&fit=crop&w=160&h=160&q=80"
+                        alt=""
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <div class="lead-card__main">
+                      <h2 class="lead-card__name">Arjun Mehta</h2>
+                      <p class="lead-card__sub"><span class="tag tag--inline tag--muted">Qualified</span> · Added <time datetime="2026-05-01">1 May</time></p>
+                    </div>
+                    <span class="lead-card__chev" aria-hidden="true">›</span>
+                  </div>
+                  <div class="interests">
+                    <p class="interests__label">Property interests</p>
+                    <ul class="interests__list">
+                      <li>Salarpuria Sattva · Commercial</li>
+                      <li>Whitefield micro-market · Land</li>
+                    </ul>
+                  </div>
+                  <div class="lead-card__actions">
+                    <button type="button" class="btn btn--secondary btn--touch lead-card__cta-btn">View details</button>
+                  </div>
+                </article>
+              </li>
+            </ul>
+            </div>
+
+            <div class="date-group">
+            <p class="section-date">30 Apr, Wed</p>
+            <ul class="lead-list">
+              <li>
+                <article class="lead-card lead-card--clickable" data-lead-id="vikram-rao" tabindex="0" role="button" aria-label="Open lead Vikram Rao">
+                  <div class="lead-card__row lead-card__row--top">
+                    <span class="lead-card__glyph" aria-hidden="true">
+                      <img
+                        class="lead-card__glyph-img"
+                        src="https://images.unsplash.com/photo-1647689662423-7948c8523256?auto=format&fit=crop&w=160&h=160&q=80"
+                        alt=""
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <div class="lead-card__main">
+                      <h2 class="lead-card__name">Vikram Rao</h2>
+                      <p class="lead-card__sub"><span class="tag tag--inline tag--muted">Qualified</span> · Added <time datetime="2026-04-30">30 Apr</time></p>
+                    </div>
+                    <span class="lead-card__chev" aria-hidden="true">›</span>
+                  </div>
+                  <div class="interests">
+                    <p class="interests__label">Property interests</p>
+                    <ul class="interests__list">
+                      <li>Mahindra Lifespaces · 2 BHK</li>
+                      <li>Brigade Northridge · Plot + villa</li>
+                    </ul>
+                  </div>
+                  <div class="lead-card__actions">
+                    <button type="button" class="btn btn--secondary btn--touch lead-card__cta-btn">View details</button>
+                  </div>
+                </article>
+              </li>
+            </ul>
+            </div>
+            </div>
+          </section>
+
+          <!-- Listings -->
+          <section class="tab-panel tab-panel--muted" id="panel-listings" aria-label="Listings" data-tab="1">
+            <ul class="listing-list">
+              <li>
+                <a
+                  class="listing-card js-open-pdf"
+                  href="#"
+                  data-pdf="./listings/oberoi-sky-villas.pdf"
+                  data-listing-title="The Oberoi Sky Villas"
+                  role="button"
+                  aria-label="Open The Oberoi Sky Villas brochure"
+                >
+                  <div class="listing-card__visual">
+                    <img
+                      class="listing-card__img"
+                      src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=90"
+                      alt="Property interior, The Oberoi Sky Villas"
+                      width="800"
+                      height="450"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="listing-card__body">
+                    <div class="listing-card__head">
+                      <h2 class="listing-card__title">The Oberoi Sky Villas</h2>
+                      <span class="listing-card__price">₹4.2 Cr*</span>
+                    </div>
+                    <p class="listing-card__spec">3 BHK · 2,850 sq ft · Mid-floor · East corridor</p>
+                    <p class="listing-card__names"><span class="listing-card__names-label">Interested parties:</span> Rahul Verma · Priya Shah · +4 others</p>
+                    <span class="listing-card__cta">Property brochure</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="listing-card js-open-pdf"
+                  href="#"
+                  data-pdf="./listings/prestige-lakeside-habitat.pdf"
+                  data-listing-title="Prestige Lakeside Habitat"
+                  role="button"
+                  aria-label="Open Prestige Lakeside Habitat brochure"
+                >
+                  <div class="listing-card__visual">
+                    <img
+                      class="listing-card__img"
+                      src="https://images.unsplash.com/photo-1616137466211-f939a420be84?auto=format&fit=crop&w=1600&q=90"
+                      alt="Property interior, Prestige Lakeside Habitat"
+                      width="800"
+                      height="450"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="listing-card__body">
+                    <div class="listing-card__head">
+                      <h2 class="listing-card__title">Prestige Lakeside Habitat</h2>
+                      <span class="listing-card__price">₹1.85 Cr*</span>
+                    </div>
+                    <p class="listing-card__spec">2 BHK · ~1,180 sq ft · Inner block · Lake-facing</p>
+                    <p class="listing-card__names"><span class="listing-card__names-label">Interested parties:</span> Neha Krishnan · +4 others</p>
+                    <span class="listing-card__cta">Property brochure</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="listing-card js-open-pdf"
+                  href="#"
+                  data-pdf="./listings/salarpuria-sattva-commercial.pdf"
+                  data-listing-title="Salarpuria Sattva · Commercial"
+                  role="button"
+                  aria-label="Open Salarpuria Sattva Commercial brochure"
+                >
+                  <div class="listing-card__visual">
+                    <img
+                      class="listing-card__img"
+                      src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=90"
+                      alt="Office interior, Salarpuria Sattva Commercial"
+                      width="800"
+                      height="450"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="listing-card__body">
+                    <div class="listing-card__head">
+                      <h2 class="listing-card__title">Salarpuria Sattva · Commercial</h2>
+                      <span class="listing-card__price">₹3.4 Cr*</span>
+                    </div>
+                    <p class="listing-card__spec">Office · ~2,400 sq ft · ORR micro-market · Shell</p>
+                    <p class="listing-card__names"><span class="listing-card__names-label">Interested parties:</span> Arjun Mehta · Vikram Rao · +4 others</p>
+                    <span class="listing-card__cta">Property brochure</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="listing-card js-open-pdf"
+                  href="#"
+                  data-pdf="./listings/brigade-northridge-estate.pdf"
+                  data-listing-title="Brigade Northridge Estate"
+                  role="button"
+                  aria-label="Open Brigade Northridge Estate brochure"
+                >
+                  <div class="listing-card__visual">
+                    <img
+                      class="listing-card__img"
+                      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=90"
+                      alt="Property interior, Brigade Northridge Estate"
+                      width="800"
+                      height="450"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="listing-card__body">
+                    <div class="listing-card__head">
+                      <h2 class="listing-card__title">Brigade Northridge Estate</h2>
+                      <span class="listing-card__price">₹5.1 Cr*</span>
+                    </div>
+                    <p class="listing-card__spec">Villa · corner plot · dual parking · clubhouse access</p>
+                    <p class="listing-card__names"><span class="listing-card__names-label">Interested parties:</span> Karan Malhotra · Vikram Rao · +4 others</p>
+                    <span class="listing-card__cta">Property brochure</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="listing-card js-open-pdf"
+                  href="#"
+                  data-pdf="./listings/mahindra-lifespaces-avenue.pdf"
+                  data-listing-title="Mahindra Lifespaces — The Avenue"
+                  role="button"
+                  aria-label="Open Mahindra Lifespaces brochure"
+                >
+                  <div class="listing-card__visual">
+                    <img
+                      class="listing-card__img"
+                      src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=90"
+                      alt="Property interior, Mahindra Lifespaces The Avenue"
+                      width="800"
+                      height="450"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="listing-card__body">
+                    <div class="listing-card__head">
+                      <h2 class="listing-card__title">Mahindra Lifespaces — The Avenue</h2>
+                      <span class="listing-card__price">₹2.2 Cr*</span>
+                    </div>
+                    <p class="listing-card__spec">3 BHK · east light · podium amenities · metro-linked shuttle</p>
+                    <p class="listing-card__names"><span class="listing-card__names-label">Interested parties:</span> Vikram Rao · Neha Krishnan · +4 others</p>
+                    <span class="listing-card__cta">Property brochure</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Today's Work -->
+          <section class="tab-panel tab-panel--muted" id="panel-work" aria-label="Today's work" data-tab="2">
+            <div class="placeholder-card">
+              <h2 class="placeholder-card__title">Today’s work</h2>
+              <p class="placeholder-card__text">
+                Follow-ups, viewings, and messages due today show up here so nothing slips through.
+              </p>
+              <ul class="mini-list">
+                <li><span class="mini-list__time">10:00</span> Callback · Rahul Verma</li>
+                <li><span class="mini-list__time">14:30</span> Site visit · Neha Krishnan</li>
+              </ul>
+            </div>
+          </section>
+          </div>
+        </div>
+      </div>
+
+      <nav class="bottom-nav" aria-label="Primary">
+        <div class="bottom-nav__pill" role="tablist">
+          <button
+            type="button"
+            class="bottom-nav__tab bottom-nav__tab--active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-leads"
+            id="tab-leads"
+            data-index="0"
+          >
+            <svg class="bottom-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm16 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Leads</span>
+          </button>
+          <button
+            type="button"
+            class="bottom-nav__tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-listings"
+            id="tab-listings"
+            data-index="1"
+          >
+            <svg class="bottom-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M3 9.5l9-6 9 6V19a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Listings</span>
+          </button>
+          <button
+            type="button"
+            class="bottom-nav__tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-work"
+            id="tab-work"
+            data-index="2"
+          >
+            <svg class="bottom-nav__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M9 11H5a2 2 0 0 0-2 2v7h18v-7a2 2 0 0 0-2-2h-4M9 11V7a3 3 0 0 1 6 0v4M9 11h6"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Today’s work</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <div
+      id="leadDetailSheet"
+      class="overlay-sheet overlay-sheet--lead"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="leadDetailTitle"
+    >
+      <header class="overlay-sheet__bar">
+        <button type="button" class="overlay-sheet__back" id="leadDetailBack" aria-label="Back to leads">← Back</button>
+        <h2 class="overlay-sheet__title" id="leadDetailTitle">Lead</h2>
+      </header>
+      <div class="overlay-sheet__body" id="leadDetailBody"></div>
+    </div>
+
+    <div
+      id="pdfSheet"
+      class="overlay-sheet overlay-sheet--pdf"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="pdfSheetTitle"
+    >
+      <header class="overlay-sheet__bar">
+        <button type="button" class="overlay-sheet__back" id="pdfSheetBack" aria-label="Back to listings">← Back</button>
+        <h2 class="overlay-sheet__title" id="pdfSheetTitle">Property brief</h2>
+      </header>
+      <iframe class="pdf-sheet__frame" id="pdfFrame" title="Property brochure"></iframe>
+    </div>
+
+  </body>
+</html>
