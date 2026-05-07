@@ -298,6 +298,9 @@ textarea {
   .chip {
     transition: none;
   }
+  .desktop-only__inner {
+    animation: none !important;
+  }
 }
 
 /* Filters */
@@ -874,8 +877,27 @@ textarea {
   display: block;
   width: min(52vw, 12.5rem);
   height: auto;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@media (min-width: 769px) {
+  .desktop-only__inner {
+    animation: desktop-only-reveal 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes desktop-only-reveal {
+  from {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
 }
 
 .desktop-only__title {
