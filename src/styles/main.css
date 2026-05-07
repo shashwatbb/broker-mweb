@@ -471,8 +471,8 @@ textarea {
 }
 
 .tag--new {
-  color: var(--primary);
-  background: var(--primary-ghost);
+  color: #14532d;
+  background: #dcfce7;
 }
 
 .tag--warm {
