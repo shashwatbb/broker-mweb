@@ -37,8 +37,6 @@
 
   --shadow-card: 0 4px 20px rgba(28, 25, 21, 0.045);
 
-  --nav-track: rgba(255, 252, 248, 0.55);
-
   --touch-min: 48px;
   --tab-slide: 0.42s cubic-bezier(0.33, 1, 0.68, 1);
 
@@ -293,7 +291,7 @@ textarea {
   min-width: 0;
   width: 100%;
   box-sizing: border-box;
-  padding-inline: var(--space-16);
+  padding-inline: 0;
   padding-bottom: var(--space-24);
   padding-top: var(--space-4);
   display: flex;
