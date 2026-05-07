@@ -119,14 +119,17 @@ textarea {
   width: 44px;
   height: 44px;
   border-radius: var(--radius-pill);
-  background: linear-gradient(145deg, #efe6ff, #f7f2e8);
   border: 1px solid var(--border);
-  display: grid;
-  place-items: center;
-  font-size: 14px;
-  font-weight: 650;
-  letter-spacing: 0.02em;
-  color: var(--primary);
+  overflow: hidden;
+  background: var(--bg-elevated);
+}
+
+.avatar__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
 }
 
 .top-bar__text {
