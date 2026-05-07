@@ -908,13 +908,6 @@ textarea {
   color: var(--text);
 }
 
-.desktop-only__lead {
-  margin: 0;
-  font-size: 0.9375rem;
-  line-height: 1.5;
-  color: var(--text-muted);
-}
-
 .desktop-only__shortcut {
   margin: 0;
   font-size: 0.875rem;
