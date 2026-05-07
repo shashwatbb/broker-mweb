@@ -179,6 +179,14 @@ function initBrokerApp() {
   function setActiveTab(index) {
     if (!track) return;
     const i = Math.max(0, Math.min(2, Number(index)));
+    const prev = Number(track.dataset.active ?? 0);
+    if (i !== prev) {
+      const view = track.parentElement;
+      if (view) view.scrollTop = 0;
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
     track.dataset.active = String(i);
 
     tabs.forEach((tab, j) => {
