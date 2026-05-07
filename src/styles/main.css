@@ -196,27 +196,6 @@ textarea {
   transform: translateY(0) scale(0.98);
 }
 
-.btn--edit {
-  min-height: var(--touch-min);
-  padding: 0 var(--space-16);
-  background: rgba(255, 255, 255, 0.85);
-  color: var(--text-muted);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
-}
-
-.btn--edit:hover {
-  background: #fff;
-  color: var(--text);
-  border-color: var(--border-strong);
-  transform: translateY(-1px);
-}
-
-.btn--edit:active {
-  transform: scale(0.98);
-}
-
-.btn--primary {
   flex: 1;
   min-height: var(--touch-min);
   padding: 0 var(--space-16);

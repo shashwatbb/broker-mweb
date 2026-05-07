@@ -90,10 +90,6 @@ function initBrokerApp() {
     console.info("Add lead or listing");
   });
 
-  document.querySelector(".btn--edit")?.addEventListener("click", () => {
-    console.info("Edit profile or preferences");
-  });
-
   window.addEventListener("resize", layoutTrack);
 
   const viewport = track?.parentElement;
