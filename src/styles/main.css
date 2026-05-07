@@ -44,6 +44,7 @@
 
 html {
   font-family: var(--font);
+  overflow-x: hidden;
 }
 
 *,
@@ -54,7 +55,7 @@ html {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -64,6 +65,7 @@ body {
   background: var(--bg-canvas);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 button,
@@ -74,14 +76,19 @@ textarea {
 }
 
 .app {
+  width: 100%;
+  max-width: min(480px, 100vw);
   min-height: 100%;
-  max-width: 480px;
+  min-height: 100dvh;
   margin: 0 auto;
-  padding: var(--space-16);
+  padding-top: max(var(--space-16), env(safe-area-inset-top, 0px));
+  padding-right: max(var(--space-16), env(safe-area-inset-right, 0px));
   padding-bottom: calc(var(--space-24) + env(safe-area-inset-bottom, 0px));
+  padding-left: max(var(--space-16), env(safe-area-inset-left, 0px));
   display: flex;
   flex-direction: column;
   gap: var(--space-16);
+  box-sizing: border-box;
 }
 
 /* Header */
@@ -815,7 +822,10 @@ textarea {
 @media (min-width: 600px) {
   .app {
     max-width: 520px;
-    padding: var(--space-24);
+    padding-top: max(var(--space-24), env(safe-area-inset-top, 0px));
+    padding-right: max(var(--space-24), env(safe-area-inset-right, 0px));
+    padding-bottom: calc(var(--space-24) + env(safe-area-inset-bottom, 0px));
+    padding-left: max(var(--space-24), env(safe-area-inset-left, 0px));
   }
 
   .lead-card__actions {

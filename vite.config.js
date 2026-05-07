@@ -1,9 +1,9 @@
 import { defineConfig } from "vite";
 
-// GitHub Pages project URL: https://<user>.github.io/<repo>/
-// Must match the repository name in the path (change "BrokerBuddy" if you rename the repo).
-export default defineConfig(({ command }) => ({
-  base: command === "build" ? "/BrokerBuddy/" : "/",
+// Relative base so CSS/JS load correctly on GitHub Pages whether the site is at
+// /RepoName/, a custom domain root, or another subdirectory (no hard-coded repo path).
+export default defineConfig({
+  base: "./",
   server: {
     port: 5173,
     strictPort: false,
@@ -14,4 +14,4 @@ export default defineConfig(({ command }) => ({
     port: 4173,
     host: true,
   },
-}));
+});
