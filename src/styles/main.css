@@ -647,22 +647,19 @@ textarea {
 }
 
 .listing-card__visual {
-  height: 128px;
+  position: relative;
+  height: 152px;
   width: 100%;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+  background: var(--bg-elevated);
 }
 
-.listing-card__visual--a {
-  background-image: linear-gradient(135deg, #efe6ff 0%, #f5efe6 45%, #e8dcc8 100%);
-}
-
-.listing-card__visual--b {
-  background-image: linear-gradient(135deg, #e3f0ff 0%, #f4efe6 50%, #dbe8e0 100%);
-}
-
-.listing-card__visual--c {
-  background-image: linear-gradient(135deg, #ebe5dc 0%, #d4cde8 55%, #f0ebe3 100%);
+.listing-card__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .listing-card__body {
