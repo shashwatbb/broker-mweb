@@ -76,6 +76,14 @@ body {
   overflow-x: hidden;
 }
 
+/* Mobile Safari / Chrome: disable default tap highlight (blue/grey flash) */
+.app,
+.app *,
+.overlay-sheet,
+.overlay-sheet * {
+  -webkit-tap-highlight-color: transparent;
+}
+
 button,
 input,
 select,
