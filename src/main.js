@@ -1,96 +1,108 @@
 import "./styles/main.css";
 
-const PANEL_GAP = 16;
+const mqMobile = window.matchMedia("(max-width: 768px)");
 
-const track = document.getElementById("tabTrack");
-const tabs = document.querySelectorAll(".bottom-nav__tab");
-const panels = document.querySelectorAll(".tab-panel");
-const chips = document.querySelectorAll(".chip");
-
-function layoutTrack() {
-  if (!track?.parentElement) return;
-  const viewport = track.parentElement;
-  const w = viewport.clientWidth;
-  if (w <= 0) return;
-
-  panels.forEach((panel) => {
-    panel.style.flexBasis = `${w}px`;
-    panel.style.width = `${w}px`;
+if (!mqMobile.matches) {
+  mqMobile.addEventListener("change", () => {
+    if (mqMobile.matches) window.location.reload();
   });
-
-  const count = panels.length;
-  const trackWidth = count * w + (count - 1) * PANEL_GAP;
-  track.style.width = `${trackWidth}px`;
-
-  const i = Number(track.dataset.active ?? 0);
-  const offset = i * (w + PANEL_GAP);
-  track.style.transform = `translateX(-${offset}px)`;
+} else {
+  initBrokerApp();
 }
 
-function setActiveTab(index) {
-  if (!track) return;
-  const i = Math.max(0, Math.min(2, Number(index)));
-  track.dataset.active = String(i);
+function initBrokerApp() {
+  const PANEL_GAP = 16;
 
-  tabs.forEach((tab, j) => {
-    const active = j === i;
-    tab.classList.toggle("bottom-nav__tab--active", active);
-    tab.setAttribute("aria-selected", active ? "true" : "false");
-    tab.tabIndex = active ? 0 : -1;
-  });
+  const track = document.getElementById("tabTrack");
+  const tabs = document.querySelectorAll(".bottom-nav__tab");
+  const panels = document.querySelectorAll(".tab-panel");
+  const chips = document.querySelectorAll(".chip");
 
-  panels.forEach((panel, j) => {
-    const active = j === i;
-    panel.setAttribute("aria-hidden", active ? "false" : "true");
-  });
+  function layoutTrack() {
+    if (!track?.parentElement) return;
+    const viewport = track.parentElement;
+    const w = viewport.clientWidth;
+    if (w <= 0) return;
 
-  layoutTrack();
-}
+    panels.forEach((panel) => {
+      panel.style.flexBasis = `${w}px`;
+      panel.style.width = `${w}px`;
+    });
 
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    setActiveTab(tab.dataset.index);
-  });
-});
+    const count = panels.length;
+    const trackWidth = count * w + (count - 1) * PANEL_GAP;
+    track.style.width = `${trackWidth}px`;
 
-document.addEventListener("keydown", (e) => {
-  if (!track) return;
-  const current = Number(track.dataset.active || 0);
-  if (e.key === "ArrowLeft" && current > 0) {
-    e.preventDefault();
-    setActiveTab(current - 1);
-    tabs[current - 1].focus();
+    const i = Number(track.dataset.active ?? 0);
+    const offset = i * (w + PANEL_GAP);
+    track.style.transform = `translateX(-${offset}px)`;
   }
-  if (e.key === "ArrowRight" && current < 2) {
-    e.preventDefault();
-    setActiveTab(current + 1);
-    tabs[current + 1].focus();
+
+  function setActiveTab(index) {
+    if (!track) return;
+    const i = Math.max(0, Math.min(2, Number(index)));
+    track.dataset.active = String(i);
+
+    tabs.forEach((tab, j) => {
+      const active = j === i;
+      tab.classList.toggle("bottom-nav__tab--active", active);
+      tab.setAttribute("aria-selected", active ? "true" : "false");
+      tab.tabIndex = active ? 0 : -1;
+    });
+
+    panels.forEach((panel, j) => {
+      const active = j === i;
+      panel.setAttribute("aria-hidden", active ? "false" : "true");
+    });
+
+    layoutTrack();
   }
-});
 
-chips.forEach((chip) => {
-  chip.addEventListener("click", () => {
-    chips.forEach((c) => c.classList.remove("chip--active"));
-    chip.classList.add("chip--active");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      setActiveTab(tab.dataset.index);
+    });
   });
-});
 
-document.querySelector(".btn--add")?.addEventListener("click", () => {
-  console.info("Add lead or listing");
-});
+  document.addEventListener("keydown", (e) => {
+    if (!track) return;
+    const current = Number(track.dataset.active || 0);
+    if (e.key === "ArrowLeft" && current > 0) {
+      e.preventDefault();
+      setActiveTab(current - 1);
+      tabs[current - 1].focus();
+    }
+    if (e.key === "ArrowRight" && current < 2) {
+      e.preventDefault();
+      setActiveTab(current + 1);
+      tabs[current + 1].focus();
+    }
+  });
 
-document.querySelector(".btn--edit")?.addEventListener("click", () => {
-  console.info("Edit profile or preferences");
-});
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      chips.forEach((c) => c.classList.remove("chip--active"));
+      chip.classList.add("chip--active");
+    });
+  });
 
-window.addEventListener("resize", layoutTrack);
+  document.querySelector(".btn--add")?.addEventListener("click", () => {
+    console.info("Add lead or listing");
+  });
 
-const viewport = track?.parentElement;
-if (viewport && typeof ResizeObserver !== "undefined") {
-  const ro = new ResizeObserver(() => layoutTrack());
-  ro.observe(viewport);
+  document.querySelector(".btn--edit")?.addEventListener("click", () => {
+    console.info("Edit profile or preferences");
+  });
+
+  window.addEventListener("resize", layoutTrack);
+
+  const viewport = track?.parentElement;
+  if (viewport && typeof ResizeObserver !== "undefined") {
+    const ro = new ResizeObserver(() => layoutTrack());
+    ro.observe(viewport);
+  }
+
+  requestAnimationFrame(() => {
+    setActiveTab(Number(track?.dataset.active ?? 0));
+  });
 }
-
-requestAnimationFrame(() => {
-  setActiveTab(Number(track?.dataset.active ?? 0));
-});

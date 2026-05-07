@@ -13,6 +13,30 @@
     />
   </head>
   <body>
+    <section class="desktop-only" id="desktopOnly" aria-labelledby="desktop-only-heading">
+      <div class="desktop-only__inner">
+        <img
+          class="desktop-only__mascot"
+          src="./mobile-only-mascot.png"
+          alt=""
+          width="320"
+          height="320"
+          decoding="async"
+        />
+        <h1 class="desktop-only__title" id="desktop-only-heading">Only for mobile, bruh</h1>
+        <p class="desktop-only__lead">Small screens only — not a responsive flex situation.</p>
+        <p class="desktop-only__shortcut">
+          <span class="desktop-only__shortcut-label">Shortcut:</span>
+          <kbd class="kbd">⌘</kbd>
+          <span class="desktop-only__plus">+</span>
+          <kbd class="kbd">Shift</kbd>
+          <span class="desktop-only__plus">+</span>
+          <kbd class="kbd">I</kbd>
+          <span class="desktop-only__hint-inline">then toggle the device toolbar to view in mobile.</span>
+        </p>
+        <p class="desktop-only__alt">Windows / Linux: <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">I</kbd></p>
+      </div>
+    </section>
     <div id="app" class="app">
       <header class="top-bar" aria-label="Broker profile">
         <div class="top-bar__identity">

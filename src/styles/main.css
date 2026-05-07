@@ -832,3 +832,117 @@ textarea {
     max-width: 100%;
   }
 }
+
+/* —— Desktop: mobile-only gate (≥769px) —— */
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .desktop-only {
+    display: grid;
+    place-items: center;
+    min-height: 100dvh;
+    min-height: 100vh;
+    padding: var(--space-24);
+    padding-top: max(var(--space-24), env(safe-area-inset-top, 0px));
+    padding-bottom: max(var(--space-24), env(safe-area-inset-bottom, 0px));
+    box-sizing: border-box;
+    background-color: var(--bg-canvas);
+    background-image:
+      linear-gradient(rgba(20, 18, 15, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(20, 18, 15, 0.045) 1px, transparent 1px);
+    background-size: 28px 28px;
+    background-position: center top;
+  }
+
+  .app {
+    display: none !important;
+  }
+}
+
+.desktop-only__inner {
+  max-width: 22rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.desktop-only__mascot {
+  display: block;
+  width: min(72vw, 16rem);
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.desktop-only__title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.desktop-only__lead {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.desktop-only__shortcut {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text);
+  text-align: center;
+}
+
+.desktop-only__shortcut-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: var(--space-8);
+}
+
+.desktop-only__plus {
+  margin: 0 0.15em;
+  color: var(--text-soft);
+  user-select: none;
+}
+
+.desktop-only__hint-inline {
+  display: block;
+  margin-top: var(--space-12);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.desktop-only__alt {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+.kbd {
+  display: inline-block;
+  min-width: 1.75rem;
+  padding: 0.25em 0.5em;
+  font-family: var(--font);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+}
