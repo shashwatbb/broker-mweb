@@ -428,10 +428,17 @@ textarea {
   height: 40px;
   border-radius: 14px;
   background: var(--bg-elevated);
-  display: grid;
-  place-items: center;
-  font-size: 1.125rem;
   border: 1px solid var(--border);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.lead-card__glyph-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
 }
 
 .lead-card__main {
