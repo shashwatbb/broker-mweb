@@ -2,7 +2,7 @@
   "name": "broker-crm-mweb",
   "private": true,
   "type": "module",
-  "homepage": "https://shashwatbb.github.io/BrokerBuddy/",
+  "homepage": "https://shashwatbb.github.io/broker-mweb/",
   "scripts": {
     "dev": "vite",
     "start": "vite",
