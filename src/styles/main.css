@@ -158,6 +158,10 @@ textarea {
   flex-shrink: 0;
 }
 
+.top-bar .btn--add {
+  padding-inline: var(--space-24);
+}
+
 /* Buttons */
 .btn {
   font-family: inherit;
@@ -227,12 +231,13 @@ textarea {
 }
 
 .btn--secondary:hover {
-  background: var(--bg-elevated);
-  border-color: #cfc5b7;
+  background: transparent;
+  border-color: #1c1915;
   transform: translateY(-1px);
 }
 
 .btn--secondary:active {
+  background: transparent;
   transform: translateY(0) scale(0.99);
 }
 
@@ -533,13 +538,14 @@ textarea {
 }
 
 .lead-card .btn--secondary:hover {
-  background: rgba(28, 25, 21, 0.05);
-  border-color: #1c1915;
+  background: transparent;
+  border-color: #0f0d0b;
   color: var(--text);
 }
 
 .lead-card .btn--secondary:active {
-  background: rgba(28, 25, 21, 0.08);
+  background: transparent;
+  border-color: #1c1915;
 }
 
 /* Placeholder panels */
@@ -705,58 +711,11 @@ textarea {
   line-height: 1.45;
 }
 
-.listing-card__interested {
-  padding: var(--space-12);
-  border-radius: var(--radius-md);
-  background: var(--bg-elevated);
-  border: 1px dashed var(--border);
-}
-
-.listing-card__interested-label {
-  display: block;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #6e665c;
-  margin-bottom: var(--space-8);
-}
-
-.listing-avatars {
-  display: flex;
-  align-items: center;
-  margin-bottom: var(--space-8);
-}
-
-.listing-avatar {
-  flex-shrink: 0;
-  width: 34px;
-  height: 34px;
-  border-radius: var(--radius-pill);
-  display: grid;
-  place-items: center;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  color: var(--text);
-  background: #fff;
-  border: 2px solid var(--surface);
-  box-shadow: var(--shadow-sm);
-}
-
-.listing-avatar + .listing-avatar {
-  margin-left: -12px;
-}
-
 .listing-card__names {
   margin: 0;
   font-size: 0.8125rem;
   line-height: 1.45;
   color: #504a42;
-}
-
-.listing-card__dot {
-  margin: 0 0.25rem;
-  color: var(--text-soft);
 }
 
 .listing-card__cta {
@@ -781,13 +740,14 @@ textarea {
 }
 
 .listing-card:hover .listing-card__cta {
-  background: rgba(28, 25, 21, 0.05);
-  border-color: #1c1915;
+  background: transparent;
+  border-color: #0f0d0b;
   color: var(--text);
 }
 
 .listing-card:active .listing-card__cta {
-  background: rgba(28, 25, 21, 0.08);
+  background: transparent;
+  border-color: #1c1915;
 }
 
 /* Bottom navigation — fixed float, liquid glass */
