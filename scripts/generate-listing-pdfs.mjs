@@ -75,6 +75,50 @@ const listings = [
       "Confirm LOI timeline; share CAM & escalation matrix from landlord pack.",
     ],
   },
+  {
+    file: "brigade-northridge-estate.pdf",
+    title: "Brigade Northridge Estate",
+    body: [
+      "Property brief — May 2026",
+      "Prepared for: Premier Properties / Maya Agarwal",
+      "",
+      "Overview",
+      "Low-rise villas with private gardens, clubhouse-driven lifestyle, and",
+      "quiet cul-de-sac planning favoured by family buyers upgrading from apartments.",
+      "",
+      "Specifications",
+      "· Plot / built-up: indicative — villa cluster options available",
+      "· Bedrooms: 4–5  ·  Parking: 2 covered",
+      "",
+      "Why it fits",
+      "Strong word-of-mouth in WhatsApp groups; repeat enquiries from legacy Brigade buyers.",
+      "",
+      "Next steps",
+      "Share master plan; align on unit typology and budget band before first site visit.",
+    ],
+  },
+  {
+    file: "mahindra-lifespaces-avenue.pdf",
+    title: "Mahindra Lifespaces — The Avenue",
+    body: [
+      "Property brief — May 2026",
+      "Prepared for: Premier Properties / Maya Agarwal",
+      "",
+      "Overview",
+      "Master-planned community with wide internal roads, active retail frontage, and",
+      "apartment blocks designed for long hold + rental yield mix.",
+      "",
+      "Specifications",
+      "· 2 & 3 BHK options (indicative sizes on request)",
+      "· Clubhouse, sports courts, and managed landscape maintenance",
+      "",
+      "Investment angle",
+      "Steady rental demand from airport + SEZ catchment; good for NRI hand-holding.",
+      "",
+      "Next steps",
+      "Send current availability matrix; book weekend slot for NRI family on video tour.",
+    ],
+  },
 ];
 
 async function buildPdf(entry) {
@@ -104,6 +148,8 @@ async function buildPdf(entry) {
       line === "Amenities" ||
       line === "Why buyers like it" ||
       line === "Tenant notes" ||
+      line === "Investment angle" ||
+      line === "Why it fits" ||
       line === "Next steps";
     const size = isSection ? 11 : 10;
     const f = isSection ? fontBold : font;
