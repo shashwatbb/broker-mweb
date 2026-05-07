@@ -317,10 +317,11 @@ textarea {
 
 .chip {
   font-family: inherit;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  padding: 10px 14px;
-  min-height: var(--touch-min);
+  line-height: 1.2;
+  padding: 5px 12px;
+  min-height: 34px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.65);
